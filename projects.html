@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse through the technical project work of John Doe, featuring frontend development, responsive design systems, React, and WCAG-compliant architectures.">
+  <title>Projects Portfolio | John Doe</title>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Skip to Content Link (WCAG 2.4.1 Bypass Blocks) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="John Doe Home">
+        JohnDoe<span class="logo-dot" aria-hidden="true">.</span>
+      </a>
+
+      <!-- Navigation Landmark -->
+      <nav aria-label="Primary Navigation">
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open primary menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+    
+    <!-- Portfolio Section -->
+    <section class="section" aria-labelledby="projects-page-title">
+      <div class="container">
+        <div class="section-header" style="text-align: center;">
+          <h1 id="projects-page-title">Projects Portfolio</h1>
+          <p>Explore my recent development works, focused on clean semantics, performance, and WCAG compliance.</p>
+        </div>
+
+        <!-- Accessible Filter Controls (WCAG 1.3.1 Grouping / WCAG 4.1.2 Name, Role, Value) -->
+        <div class="filter-controls" role="group" aria-label="Filter projects by technical category">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
+          <button class="filter-btn" data-filter="accessibility" aria-pressed="false">Accessibility</button>
+          <button class="filter-btn" data-filter="react" aria-pressed="false">React</button>
+        </div>
+
+        <!-- Live Announcer for Screen Readers (WCAG 4.1.3 Status Messages) -->
+        <div id="filter-announcer" class="visually-hidden" aria-live="polite"></div>
+
+        <!-- Project Grid -->
+        <div class="grid-3" id="projects-grid">
+          
+          <!-- Project 1 -->
+          <div class="grid-item">
+            <article class="project-card" data-category="accessibility" aria-labelledby="proj-1-title">
+              <div class="project-img-wrapper" aria-hidden="true">
+                <span class="project-img-placeholder">&#128187;</span>
+              </div>
+              <div class="project-body">
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="project-tag">HTML5 / CSS3</li>
+                  <li class="project-tag">JavaScript</li>
+                  <li class="project-tag">ARIA</li>
+                </ul>
+                <h2 id="proj-1-title" class="project-title" style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-heading);">Accessible UI Component Library</h2>
+                <p>A robust collection of keyboard-navigable and screen-reader optimized widgets, including modal dialogs, tablists, and custom selects.</p>
+                <a href="#" class="project-link" aria-label="Learn more about Accessible UI Component Library project">
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="grid-item">
+            <article class="project-card" data-category="react" aria-labelledby="proj-2-title">
+              <div class="project-img-wrapper" aria-hidden="true">
+                <span class="project-img-placeholder">&#128269;</span>
+              </div>
+              <div class="project-body">
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="project-tag">Vite / React</li>
+                  <li class="project-tag">WCAG 2.1</li>
+                  <li class="project-tag">Tailwind</li>
+                </ul>
+                <h2 id="proj-2-title" class="project-title" style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-heading);">Inclusive E-Commerce Platform</h2>
+                <p>A completely keyboard-navigable and screen-reader compliant shopping portal featuring accessible product lists, filter drawers, and modal checkout steps.</p>
+                <a href="#" class="project-link" aria-label="Learn more about Inclusive E-Commerce Platform project">
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="grid-item">
+            <article class="project-card" data-category="accessibility" aria-labelledby="proj-3-title">
+              <div class="project-img-wrapper" aria-hidden="true">
+                <span class="project-img-placeholder">&#128304;</span>
+              </div>
+              <div class="project-body">
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="project-tag">Next.js</li>
+                  <li class="project-tag">A11y Auditing</li>
+                  <li class="project-tag">Semantics</li>
+                </ul>
+                <h2 id="proj-3-title" class="project-title" style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-heading);">GovTech Form Portal</h2>
+                <p>Re-architected a public government utility form system to decrease user validation errors by 40% using explicit tab index controls and dynamic live regions.</p>
+                <a href="#" class="project-link" aria-label="Learn more about GovTech Form Portal project">
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="grid-item">
+            <article class="project-card" data-category="frontend" aria-labelledby="proj-4-title">
+              <div class="project-img-wrapper" aria-hidden="true">
+                <span class="project-img-placeholder">&#128188;</span>
+              </div>
+              <div class="project-body">
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="project-tag">HTML5</li>
+                  <li class="project-tag">CSS Grid</li>
+                  <li class="project-tag">Semantics</li>
+                </ul>
+                <h2 id="proj-4-title" class="project-title" style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-heading);">Portfolio Skeleton Base</h2>
+                <p>An open-source skeleton architecture for multi-page web sites emphasizing strict semantic standards, meta-tag optimization, and full screen reader accessibility.</p>
+                <a href="#" class="project-link" aria-label="Learn more about Portfolio Skeleton Base project">
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="grid-item">
+            <article class="project-card" data-category="frontend" aria-labelledby="proj-5-title">
+              <div class="project-img-wrapper" aria-hidden="true">
+                <span class="project-img-placeholder">&#128396;</span>
+              </div>
+              <div class="project-body">
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="project-tag">Vanilla CSS</li>
+                  <li class="project-tag">Tokens</li>
+                  <li class="project-tag">Design System</li>
+                </ul>
+                <h2 id="proj-5-title" class="project-title" style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-heading);">High-Contrast CSS Design Tokens</h2>
+                <p>A customizable light/dark-mode theme engine ensuring typography contrast meets AA/AAA guidelines automatically through calculated CSS variables.</p>
+                <a href="#" class="project-link" aria-label="Learn more about High-Contrast CSS Design Tokens project">
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="grid-item">
+            <article class="project-card" data-category="react" aria-labelledby="proj-6-title">
+              <div class="project-img-wrapper" aria-hidden="true">
+                <span class="project-img-placeholder">&#128202;</span>
+              </div>
+              <div class="project-body">
+                <ul class="project-tags" aria-label="Technologies used">
+                  <li class="project-tag">React</li>
+                  <li class="project-tag">SVG</li>
+                  <li class="project-tag">A11y Tables</li>
+                </ul>
+                <h2 id="proj-6-title" class="project-title" style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-heading);">React Data Visualizer</h2>
+                <p>An SVG-based graphing suite rendering live statistics with parallel semantic table backups to convey statistical data to screen readers.</p>
+                <a href="#" class="project-link" aria-label="Learn more about React Data Visualizer project">
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2026 John Doe. Built with strict semantic HTML5 and accessibility in mind.</p>
+      
+      <ul class="footer-socials" aria-label="Social media and professional profiles">
+        <li>
+          <a href="https://github.com" class="footer-social-link" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#128187;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#128188;</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contact@johndoe.dev" class="footer-social-link" aria-label="Send John an Email">
+            <span aria-hidden="true">&#9993;</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about John Doe, a Senior Frontend Developer & Accessibility Specialist. Read about his background, key technical skills, and professional experience timeline.">
+  <title>About John Doe | Senior Frontend Developer & Accessibility Specialist</title>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Skip to Content Link (WCAG 2.4.1 Bypass Blocks) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="John Doe Home">
+        JohnDoe<span class="logo-dot" aria-hidden="true">.</span>
+      </a>
+
+      <!-- Navigation Landmark -->
+      <nav aria-label="Primary Navigation">
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open primary menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+    
+    <!-- Profile Bio Section -->
+    <section class="section" aria-labelledby="about-page-title">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Decorative Image Wrapper -->
+          <div class="about-img-placeholder" aria-hidden="true">
+            <!-- Simulated premium profile frame. In production, use <img alt="John Doe's professional headshot"> -->
+            <span style="font-size: 5rem;">&#128104;&#8205;&#128187;</span>
+          </div>
+
+          <div class="about-content">
+            <h1 id="about-page-title">About Me</h1>
+            <p>
+              I am John Doe, a seasoned frontend developer with over 7 years of industry experience. I specialize in building inclusive digital experiences using modern frameworks like React, Next.js, and vanilla JavaScript. 
+            </p>
+            <p>
+              My development philosophy is centered around the idea that the web is for everyone. Over the last three years, I have focused heavily on WCAG compliance, conducting accessibility audits, and implementing semantic architectures that satisfy the strict criteria of assistive technologies.
+            </p>
+            
+            <!-- Skills Sub-section -->
+            <div class="skills-container">
+              <h2 id="skills-heading">Core Skills</h2>
+              <ul class="skills-list" aria-labelledby="skills-heading">
+                <li class="skill-item">
+                  <span aria-hidden="true">&#9889;</span> JavaScript (ES6+)
+                </li>
+                <li class="skill-item">
+                  <span aria-hidden="true">&#9757;</span> Accessible Rich Internet Applications (ARIA)
+                </li>
+                <li class="skill-item">
+                  <span aria-hidden="true">&#128293;</span> HTML5 Semantics & DOM Structure
+                </li>
+                <li class="skill-item">
+                  <span aria-hidden="true">&#127912;</span> WCAG 2.1 AA/AAA Compliance
+                </li>
+                <li class="skill-item">
+                  <span aria-hidden="true">&#9881;</span> React & Next.js Ecosystems
+                </li>
+                <li class="skill-item">
+                  <span aria-hidden="true">&#129505;</span> Screen-reader testing (NVDA / VoiceOver)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="section section-alt" aria-labelledby="experience-heading">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header">
+          <h2 id="experience-heading">Professional Journey</h2>
+          <p>A history of my work designing accessible and performant frontend architectures.</p>
+        </div>
+
+        <div class="timeline" role="list">
+          
+          <!-- Experience Item 1 -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <span class="timeline-date">2023 - Present</span>
+            <h3 class="timeline-title">Lead Accessibility Engineer at TechCorp</h3>
+            <p>
+              Lead code re-factoring and semantic layout designs for international clients, helping public services achieve full WCAG 2.1 compliance. Educated and mentored developers on key screen-reader guidelines and manual focus trap strategies.
+            </p>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <span class="timeline-date">2020 - 2023</span>
+            <h3 class="timeline-title">Senior Frontend Developer at WebStudio</h3>
+            <p>
+              Built rich, responsive e-commerce web applications with Vite and React. Achieved an average SEO score improvement of 35% and accessibility ratings of 100 on public web assets.
+            </p>
+          </div>
+
+          <!-- Experience Item 3 -->
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <span class="timeline-date">2018 - 2020</span>
+            <h3 class="timeline-title">Frontend Engineer at AgencyOne</h3>
+            <p>
+              Managed HTML/CSS structures and client integrations. Developed modular layouts and established strict naming rules for high-traffic media sites.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2026 John Doe. Built with strict semantic HTML5 and accessibility in mind.</p>
+      
+      <ul class="footer-socials" aria-label="Social media and professional profiles">
+        <li>
+          <a href="https://github.com" class="footer-social-link" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#128187;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com" class="footer-social-link" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">&#128188;</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contact@johndoe.dev" class="footer-social-link" aria-label="Send John an Email">
+            <span aria-hidden="true">&#9993;</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
